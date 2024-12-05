@@ -9,8 +9,10 @@
 <body>
   <div class="container">
     
-    <h1>Heeft je algoritme gelijk?</h1>
-    <p>Deze tool laat zien hoe vaak jouw algoritme gelijk heeft als het alarm slaat (positieve voorspellende waarde, PPV). </p>
+    <h1>Kan het algoritme zijn beloftes waarmaken?</h1>
+    <p>Deze tool laat zien hoe goed het algoritme werkt in jouw situatie. 
+      Vul een paar getallen in en ontdek hoe vaak het algoritme gelijk heeft als het alarm slaat. 
+      Hiervoor kijken we ook hoe goed het normale gevallen herkent (specificiteit). Laten we beginnen! </p>
     <p><h3>Vul de volgende gegevens in:</h3></p>
 
     <div class="input-group">
@@ -20,14 +22,14 @@
 
     <div class="slider-group">
       <label for="specificity"> <strong>2.  Hoe goed slaat het alarm alleen bij echte gevallen?</strong>
-        <p>Bijvoorbeeld: hoeveel transacties of mensen worden correct als “geen probleem” aangemerkt? (specificiteit)</p>
+        <p>Bijvoorbeeld: hoeveel transacties of mensen worden correct als “geen probleem” aangemerkt? (In de statistiek heet dit "specificiteit" van het algoritme)</p>
          <span id="specificity-value">95</span>%</label>
       <input type="range" id="specificity" min="50" max="100" step="0.1" value="95">
     </div>
 
     <div class="slider-group">
       <label for="prevalence"><strong>3.  Hoe vaak komt het echt voor?</strong> 
-        <p>Bijvoorbeeld: hoeveel fraudegevallen of ziektegevallen zijn er daadwerkelijk in jouw dataset? (prevalentie)</p> 
+        <p>Bijvoorbeeld: hoeveel fraudegevallen of ziektegevallen zijn er daadwerkelijk in jouw dataset? (Dit wordt ook wel prevalentie genoemd)</p> 
         <span id="prevalence-value">10</span>%</label>
       <input type="range" id="prevalence" min="0" max="30" step="0.01" value="10">
     </div>
