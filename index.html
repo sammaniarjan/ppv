@@ -34,15 +34,25 @@
       <input type="range" id="prevalence" min="0" max="30" step="0.01" value="10">
     </div>
 
-    <button id="calculate">Bereken</button>
+    <button id="Bereken">Bereken</button>
     
+    <h2>Resultaat:</h2>
+    <p><strong>PPV:</strong> <span id="ppv-result">---</span>%</p>
+    <p><strong>Totaal Terecht Positief:</strong> <span id="true-positives">---</span></p>
+    <p><strong>Totaal Vals Positief:</strong> <span id="false-positives">---</span></p>
+
     <p> Lees <a href="https://www.arianova.nl/articles/waarom-indrukwekkende-getallen-grote-consequenties-hebben"> hier </a> meer over de achterliggende statistiek</p>
     <p> <a href="https://www.arianova.nl"> © arianova 2024</a>. </p>
+   
+    <p>Wil je een echt voorbeeld gebruiken? Dan vullen we nu de gegevens in met een algoritme die het 'recidive-risico' van bij rechtzaken (OXREC). 
+    De data komt uit <a href="https://cris.maastrichtuniversity.nl/ws/portalfiles/portal/49061175/8B_4F_A_8215E_E_57459C_0D_C_F_07C_97D_1D_1D_C_pdf.pdf">deze studie</a> 
+    en ik ben uitgegaan van <a href="https://www.om.nl/actueel/agenda-strafzittingen#:~:text=Jaarlijks%20beoordelen%20de%20OM%2Dparketten,aan%20de%20rechter%20worden%20voorgelegd.">300.000 strafzaken per jaar.</a> 
+    Je kunt uitrekenen hoeveel vals positieve resultaten (dus onterecht aangemerkt als risico op recidief!) rechters voorgeschoteld kunnen krijgen.</p>
+    <button id="Voorbeeld">Voorbeeldberekening</button>
+    
+    
     <div class="result" id="result" style="display: none;">
-      <h2>Resultaat:</h2>
-      <p><strong>PPV:</strong> <span id="ppv-result">---</span>%</p>
-      <p><strong>Totaal Terecht Positief:</strong> <span id="true-positives">---</span></p>
-      <p><strong>Totaal Vals Positief:</strong> <span id="false-positives">---</span></p>
+    
     </div>
   </div>
   <script src="script.js"></script>

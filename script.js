@@ -6,11 +6,13 @@ const specificitySlider = document.getElementById('specificity');
 const specificityValue = document.getElementById('specificity-value');
 const prevalenceSlider = document.getElementById('prevalence');
 const prevalenceValue = document.getElementById('prevalence-value');
-const calculateButton = document.getElementById('calculate');
+const calculateButton = document.getElementById('Bereken');
+const exampleButton = document.getElementById('Voorbeeld'); // Voeg een voorbeeld-knop toe
 const resultContainer = document.getElementById('result');
 const ppvResult = document.getElementById('ppv-result');
 const truePositivesResult = document.getElementById('true-positives');
 const falsePositivesResult = document.getElementById('false-positives');
+
 
 // Update slider display values
 specificitySlider.addEventListener('input', () => {
@@ -43,6 +45,20 @@ calculateButton.addEventListener('click', () => {
   }
 });
 
+// Stel voorbeeldwaarden in op knopklik
+exampleButton.addEventListener('click', () => {
+  // Voorbeeldwaarden instellen
+  populationInput.value = 300000;
+  specificitySlider.value = 32;
+  specificityValue.textContent = 32;
+  prevalenceSlider.value = 16;
+  prevalenceValue.textContent = 16;
+
+  // Optioneel: voer de berekening direct uit
+  calculateButton.click();
+});
+
+
 // Calculate PPV and totals
 function calculatePPV(population, prevalence, sensitivity, specificity) {
   const trueCases = population * prevalence; // True cases in population
@@ -56,3 +72,4 @@ function calculatePPV(population, prevalence, sensitivity, specificity) {
     falsePositives: falsePositives || 0,
   };
 }
+
