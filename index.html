@@ -3,35 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PPV Calculator</title>
+  <title>Algoritme checker</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <h1>PPV Calculator</h1>
-    <p>Je kunt je positief voorspellende waarde hier berekenen. Gebruik dit bijvoorbeeld om te bereken wat het effect van je algoritme gaat 
-        zijn in de 'echte' wereld met 'echte' prevalenties (hoe vaak iets voorkomt). Denk bijvoorbeeld aan fraudedetectie in een database van
-        banktransacties of identificatie van ziekten in een grote landelijke database.</p>
-    <p> Heb je vragen? Check dan <a href="https://www.arianova.nl"> onze website</a>. </p>
-    <p> Lees <a href="https://www.arianova.nl/articles/waarom-indrukwekkende-getallen-grote-consequenties-hebben"> hier </a> meer over de achterliggende statistiek</p>
     
+    <h1>Heeft je algoritme gelijk?</h1>
+    <p>Deze tool laat zien hoe vaak jouw algoritme gelijk heeft als het alarm slaat (positieve voorspellende waarde, PPV). </p>
+    <p><h3>Vul de volgende gegevens in:</h3></p>
+
     <div class="input-group">
-      <label for="population">1. Hoe groot is je populatie of dataset? <small>(Bijvoorbeeld 10.000 personen)</small></label>
-      <input type="number" id="population" placeholder="Voer totale populatie in" min="1" value="10000">
+      <label for="population"><strong>1. Hoeveel gegevens analyseer je?</strong> <p>Bijvoorbeeld: hoeveel transacties of personen zitten er in je dataset? (populatiegrootte)</p></label>
+      <input type="number" id="population" placeholder="Voer totaal aantal in" min="1" value="10000">
     </div>
 
     <div class="slider-group">
-      <label for="specificity">2. Wat is de specificiteit van je methode? (het aandeel normale, niet zieke of veilige "gevallen" die correct worden herkend). <span id="specificity-value">95</span>%</label>
+      <label for="specificity"> <strong>2.  Hoe goed slaat het alarm alleen bij echte gevallen?</strong>
+        <p>Bijvoorbeeld: hoeveel transacties of mensen worden correct als “geen probleem” aangemerkt? (specificiteit)</p>
+         <span id="specificity-value">95</span>%</label>
       <input type="range" id="specificity" min="50" max="100" step="0.1" value="95">
     </div>
 
     <div class="slider-group">
-      <label for="prevalence">3. Hoe vaak komt een kenmerk of aandoening voor? <span id="prevalence-value">10</span>%</label>
+      <label for="prevalence"><strong>3.  Hoe vaak komt het echt voor?</strong> 
+        <p>Bijvoorbeeld: hoeveel fraudegevallen of ziektegevallen zijn er daadwerkelijk in jouw dataset? (prevalentie)</p> 
+        <span id="prevalence-value">10</span>%</label>
       <input type="range" id="prevalence" min="0" max="30" step="0.01" value="10">
     </div>
 
     <button id="calculate">Bereken</button>
-
+    
+    <p> Lees <a href="https://www.arianova.nl/articles/waarom-indrukwekkende-getallen-grote-consequenties-hebben"> hier </a> meer over de achterliggende statistiek</p>
+    <p> <a href="https://www.arianova.nl"> © arianova 2024</a>. </p>
     <div class="result" id="result" style="display: none;">
       <h2>Resultaat:</h2>
       <p><strong>PPV:</strong> <span id="ppv-result">---</span>%</p>
