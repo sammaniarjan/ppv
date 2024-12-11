@@ -14,6 +14,17 @@ const truePositivesResult = document.getElementById('true-positives');
 const falsePositivesResult = document.getElementById('false-positives');
 
 
+// Welcome screen elements
+const welcomeScreen = document.getElementById('welcome-screen');
+const mainContent = document.getElementById('main-content');
+const startButton = document.getElementById('start-button');
+
+// Handle welcome screen
+startButton.addEventListener('click', () => {
+  welcomeScreen.style.display = 'none';
+  mainContent.style.display = 'block';
+});
+
 // Update slider display values
 specificitySlider.addEventListener('input', () => {
   specificityValue.textContent = specificitySlider.value;
@@ -59,6 +70,7 @@ exampleButton.addEventListener('click', () => {
 });
 
 
+
 // Calculate PPV and totals
 function calculatePPV(population, prevalence, sensitivity, specificity) {
   const trueCases = population * prevalence; // True cases in population
@@ -72,4 +84,3 @@ function calculatePPV(population, prevalence, sensitivity, specificity) {
     falsePositives: falsePositives || 0,
   };
 }
-

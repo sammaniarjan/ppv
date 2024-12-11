@@ -9,6 +9,39 @@ body {
     align-items: center;
   }
   
+  .welcome-screen {
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .welcome-screen ul {
+    text-align: left;
+    margin: 20px auto;
+    max-width: 400px;
+    line-height: 1.6;
+  }
+  
+  .welcome-button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .welcome-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .main-content {
+    width: 100%;
+  }
+
+
   /* Stijlen voor de container */
   .container {
     background: white;
