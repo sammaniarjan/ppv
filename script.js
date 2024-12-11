@@ -66,7 +66,7 @@ exampleButton.addEventListener('click', () => {
   prevalenceValue.textContent = 16;
 
   // Optioneel: voer de berekening direct uit
-  calculateButton.click();
+ // calculateButton.click();
 });
 
 
@@ -84,3 +84,5 @@ function calculatePPV(population, prevalence, sensitivity, specificity) {
     falsePositives: falsePositives || 0,
   };
 }
+
+
